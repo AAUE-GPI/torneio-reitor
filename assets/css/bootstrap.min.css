@@ -13,3 +13,28 @@ body {
     background-position: center center; 
 
 }
+
+table, thead, th, td, tr  {
+    vertical-align: middle; 
+    text-align: center;
+    height: 60px;
+}
+.table > tbody > tr > td{
+	vertical-align: middle;
+}
+
+.table > thead > tr > th {
+	height: 60px;
+	background-color: #AD1C3E;
+	color:white;
+	vertical-align: middle; 
+    text-align: center;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: #EBEBEB;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+	background-color: #D9D9D9;
+}
