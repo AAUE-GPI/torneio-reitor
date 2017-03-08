@@ -1,9 +1,9 @@
-<title> Calendário </title>
+<title> AAUE :: Torneio do Reitor - Calendário </title>
 <body>
 <div class="container">
 
 <table class="table table-striped" style ="width:70%" align="center">
-  <thead  style="background-color: #AD1C3E; color: white">
+  <thead>
 		<tr>
 			<th>Jornada</th>
 			<th>Dia</th>
