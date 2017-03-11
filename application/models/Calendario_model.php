@@ -30,4 +30,21 @@ class Calendario_model extends CI_Model {
 
 		return $query->result_array();
 	}
+
+	/*  O PHP nao deixa que se volte a declarar uma função com o mesmo nome
+	 *  Esta função serve para retornar os jogos de um determinado grupo $grupo
+	*/
+
+	public function getJogosbyGroup($grupo)
+	{
+		$sql='SELECT * FROM calendario where grupo=?';
+		$query=$this->db->query($sql, array('$grupo'));
+		return $query->result_array();
+	}
+
+	public function getEquipas(){
+		$query = $this->db->get('equipas');
+		
+		return $query->result_array();
+	}
 }

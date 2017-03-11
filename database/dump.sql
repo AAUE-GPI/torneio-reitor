@@ -41,6 +41,35 @@ LOCK TABLES `calendario` WRITE;
 INSERT INTO `calendario` VALUES (1,2,'dfsd','fssfd','fdsdfsfd0','cona'),(4,2,'dfsd','fssfd','fdsdfsfd0','cona'),(3,4,'dfsd','fssfd','fdsdfsfd0','cona'),(1,3,'dfsd','fssfd','fdsdfsfd0','cona'),(5,6,'dfsd','fssfd','fdsdfsfd0','cona'),(5,6,'dfsd','FUSCO GAY','NUNO GAY','cona');
 /*!40000 ALTER TABLE `calendario` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `equipas`
+--
+
+DROP TABLE IF EXISTS `equipas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `equipas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` text,
+  `pontos` int(11) DEFAULT NULL,
+  `jr` int(11) DEFAULT NULL,
+  `gm` int(11) DEFAULT NULL,
+  `gs` int(11) DEFAULT NULL,
+  `dif` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `equipas`
+--
+
+LOCK TABLES `equipas` WRITE;
+/*!40000 ALTER TABLE `equipas` DISABLE KEYS */;
+INSERT INTO `equipas` VALUES (1,'A TEAM',20,1,2,3,10),(2,'B TEAM',20,1,2,3,10),(3,'69 TEAM',20,1,2,3,10),(4,'PINTO TEAM',20,1,2,3,10);
+/*!40000 ALTER TABLE `equipas` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -51,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-09  0:16:55
+-- Dump completed on 2017-03-11  0:39:31

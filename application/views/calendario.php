@@ -1,56 +1,78 @@
 <title> AAUE :: Torneio do Reitor - Calendário </title>
 <body>
- 
+	<div class="container">
 
- <div class="btn-group btn-group-justified">
- 	<a href="#" class="btn btn-primary">Grupo A</a>
- 	<a href="#" class="btn btn-primary">Grupo B</a>
- 	<a href="#" class="btn btn-primary">Grupo C</a>
- 	<a href="#" class="btn btn-primary">Grupo D</a>
- 	<a href="#" class="btn btn-primary">Grupo E</a>
-</div>
+		<div class="btn-group btn-group-justified" role="group">
+			<div class="btn-group" role="group">
+				<button type="button" class="btn botaoGrupos">Grupo A</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn botaoGrupos">Grupo B</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn botaoGrupos">Grupo C</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn botaoGrupos">Grupo D</button>
+			</div>
+			<div class="btn-group" role="group">
+				<button type="button" class="btn botaoGrupos">Grupo D</button>
+			</div>
+		</div>
 
-<div class="container">
+		<div class="table-responsive">
+			<table class="table">
+				  <table class="table tabela-riscada">
+				  	<thead>
+				  		<tr>
+				  			<th>Jornada</th>
+				  			<th>Dia</th>
+				  			<th>Hora</th>
+				  			<th>Local</th>
+				  			<th>Equipas</th>
+				  			<th>Resultado</th>
+				  		</tr>
+				  	</thead>
 
-<table class="table table-striped" style ="width:70%" align="center">
-  <thead>
-		<tr>
-			<th>Jornada</th>
-			<th>Dia</th>
-			<th>Hora</th>
-			<th>Local</th>
-			<th>Equipas</th>
-			<th>Resultado</th>
-		</tr>
-	</thead>
-	<tbody>
-	<?php 
-	 	foreach($row as $row): ?>
-	 		<tr>
-	 		<td><?php echo implode('</td><td>', $row); ?></td>
-	 		</td>
-		<?php endforeach; ?>
-	</tbody>
+				  	<tbody>
+				  		<?php 
+				  		foreach($jogos as $jogos): ?>
+				  		<tr>
+				  			<td><?php echo implode('</td><td>', $jogos); ?></td>
 
-</table></div>
+				  		</tr>
+				  	<?php endforeach; ?>
+				  </tbody>
 
-<div class ="container">
-<table class="table table-striped" style ="width:70%" align="center">
-  <thead>
-		<tr>
-			<th>Jornada</th>
-			<th>Dia</th>
-			<th>Hora</th>
-			<th>Local</th>
-			<th>Equipas</th>
-			<th>Resultado</th>
-		</tr>
-	</thead>
-	<tbody>
+				</table>
+		</div> 
+		<div class="table-responsive">
+			<table class="table">
+				  <table class="table tabela-riscada">
+				  	<thead>
+				  		<tr>
+				  			<th>Posição</th>
+				  			<th>Equipa</th>
+				  			<th>PTS</th>
+				  			<th>JR</th>
+				  			<th>GM</th>
+				  			<th>GS</th>
+				  			<th>DIF</th>
+				  		</tr>
+				  	</thead>
 
-	</tbody>
+				  	<tbody>
+				  		<?php 
+				  		foreach($equipas as $equipas): ?>
+				  		<tr>
+				  			<td><?php echo implode('</td><td>', $equipas); ?></td>
 
-</table></div>
+				  		</tr>
+				  	<?php endforeach; ?>
+				  </tbody>
 
+				</table>
+		</div> 
 
+	</div>
 </body>
