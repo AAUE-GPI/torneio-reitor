@@ -64,10 +64,9 @@
 				  	<tbody>
 				  		<?php
 				  		$posicao = 1;
-
 				  		foreach($equipas as $equipas): ?>
 				  		<tr>
-				  			<td><?php print_r($posicao); $posicao ++;?></td>
+				  			<td><?php echo($posicao); $posicao ++;?></td>
 				  			<td><?php echo $equipas['nome']; ?></td>
 				  			<td><?php echo $equipas['pontos']; ?></td>
 				  			<td><?php echo $equipas['jr']; ?></td>

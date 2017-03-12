@@ -43,9 +43,7 @@ class Calendario_model extends CI_Model {
 	}
 
 	public function getEquipas(){
-		$sql='SELECT nome, pontos, jr, gm, gs FROM equipas ORDER BY pontos DESC';
-		$query=$this->db->query($sql, array('$grupo'));
-		
+		$query = $this->db->select('nome, pontos, jr, gm, gs')->from('equipas')->order_by('pontos', 'DESC')->get();
 		return $query->result_array();
 	}
 }
