@@ -62,10 +62,18 @@
 				  	</thead>
 
 				  	<tbody>
-				  		<?php 
+				  		<?php
+				  		$posicao = 1;
+
 				  		foreach($equipas as $equipas): ?>
 				  		<tr>
-				  			<td><?php echo implode('</td><td>', $equipas); ?></td>
+				  			<td><?php print_r($posicao); $posicao ++;?></td>
+				  			<td><?php echo $equipas['nome']; ?></td>
+				  			<td><?php echo $equipas['pontos']; ?></td>
+				  			<td><?php echo $equipas['jr']; ?></td>
+				  			<td><?php echo $equipas['gm']; ?></td>
+				  			<td><?php echo $equipas['gs']; ?></td>
+				  			<td><?php echo ($equipas['gm'] - $equipas['gs']); ?></td>
 
 				  		</tr>
 				  	<?php endforeach; ?>
