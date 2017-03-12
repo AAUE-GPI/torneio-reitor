@@ -56,9 +56,9 @@ CREATE TABLE `equipas` (
   `jr` int(11) DEFAULT NULL,
   `gm` int(11) DEFAULT NULL,
   `gs` int(11) DEFAULT NULL,
-  `dif` int(11) DEFAULT NULL,
+  `grupo` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `equipas` (
 
 LOCK TABLES `equipas` WRITE;
 /*!40000 ALTER TABLE `equipas` DISABLE KEYS */;
-INSERT INTO `equipas` VALUES (1,'A TEAM',20,1,2,3,10),(2,'B TEAM',20,1,2,3,10),(3,'69 TEAM',20,1,2,3,10),(4,'PINTO TEAM',20,1,2,3,10);
+INSERT INTO `equipas` VALUES (1,'62 TEAM',25,1,5,3,'Grupo A'),(2,'69 TEAM',4,1,6,2,'Grupo A'),(3,'69 TEAM',4,1,10,2,'Grupo B');
 /*!40000 ALTER TABLE `equipas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -80,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-11  0:39:31
+-- Dump completed on 2017-03-12 18:13:40
