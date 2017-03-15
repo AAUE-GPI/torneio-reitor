@@ -83,7 +83,6 @@ body {
 	.botaoGrupos{
 		margin-bottom: 15px;
 	}
-
 }
 
 .panel-faq {
@@ -112,4 +111,3 @@ body {
 }
 .panel-faq > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #ddd;
-}
