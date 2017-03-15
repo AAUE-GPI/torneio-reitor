@@ -83,5 +83,31 @@ body {
 	.botaoGrupos{
 		margin-bottom: 15px;
 	}
-
 }
+
+.panel-faq {
+  border-color: #ddd;
+  border: none;
+}
+.panel-faq >.panel-heading:nth-child(n+1) {
+  color: white;
+  background-color: black;
+  border-color: #ddd;
+}
+
+
+.panel-faq >.panel-heading:nth-child(even) {
+  color: white;
+  background-color: red;
+  border-color: #ddd;
+}
+
+.panel-faq > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #ddd;
+}
+.panel-faq > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+.panel-faq > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #ddd;
