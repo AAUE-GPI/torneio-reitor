@@ -27,14 +27,8 @@ class Calendario extends CI_Controller {
 	public function index()
 	{
 
-		$jogos['jogos'] = $this->calendario_model->getJogos();
-		$equipas['equipas'] = $this->calendario_model->getEquipas();
 
-		//print_r($data);
-		//print_r($equipas);
-		$this->load->view('template/header', $jogos);
-		$this->load->view('template/header', $equipas);
-		$this->load->view('calendario');
+		$this->load->view('template/header');
 		$this->load->view('template/footer');
 
 	}
