@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$this->load->helper('url');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
     <!-- Bootstrap -->
-	<link href="assets/css/bootstrap.css" rel="stylesheet">
-	<link href="assets/css/custom.css" rel="stylesheet">
+	<link href="<?php echo base_url()?>assets/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php echo base_url()?>assets/css/custom.css" rel="stylesheet">
 
 
 	
