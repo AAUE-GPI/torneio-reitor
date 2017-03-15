@@ -37,8 +37,10 @@ class Calendario_model extends CI_Model {
 
 	public function getJogosbyGroup($grupo)
 	{
-		$sql='SELECT * FROM calendario where grupo=?';
-		$query=$this->db->query($sql, array('$grupo'));
+		$query = $this->db->select('jornada, dia, hora, local, equipas, resultado')
+			->get_where('calendario', array('grupo' => $grupo))
+			;
+
 		return $query->result_array();
 	}
 
@@ -48,6 +50,11 @@ class Calendario_model extends CI_Model {
 			->order_by('pontos', 'DESC')
 			->get();
 			
+		return $query->result_array();
+	}
+	public function getGrupos(){
+		$query = $this->db->get('grupos');
+
 		return $query->result_array();
 	}
 }
