@@ -28,7 +28,8 @@ CREATE TABLE `calendario` (
   `hora` text,
   `local` text,
   `equipas` text,
-  `resultado` text
+  `resultado` text,
+  `grupo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,7 +39,7 @@ CREATE TABLE `calendario` (
 
 LOCK TABLES `calendario` WRITE;
 /*!40000 ALTER TABLE `calendario` DISABLE KEYS */;
-INSERT INTO `calendario` VALUES (1,2,'dfsd','fssfd','fdsdfsfd0','cona'),(4,2,'dfsd','fssfd','fdsdfsfd0','cona'),(3,4,'dfsd','fssfd','fdsdfsfd0','cona'),(1,3,'dfsd','fssfd','fdsdfsfd0','cona'),(5,6,'dfsd','fssfd','fdsdfsfd0','cona'),(5,6,'dfsd','FUSCO GAY','NUNO GAY','cona');
+INSERT INTO `calendario` VALUES (1,2,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(4,2,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(3,4,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(1,3,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(5,6,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(5,6,'dfsd','FUSCO GAY','NUNO GAY','cona',NULL),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',1),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',1),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',3),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',2),(1,2,'dfsd','fssfd','Grupo A','cona',1),(1,2,'dfsd','fssfd','Grupo B','cona',2),(1,2,'dfsd','fssfd','Grupo C','cona',3),(1,2,'dfsd','fssfd','Grupo D','cona',4);
 /*!40000 ALTER TABLE `calendario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -56,7 +57,7 @@ CREATE TABLE `equipas` (
   `jr` int(11) DEFAULT NULL,
   `gm` int(11) DEFAULT NULL,
   `gs` int(11) DEFAULT NULL,
-  `grupo` text,
+  `grupo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -67,8 +68,32 @@ CREATE TABLE `equipas` (
 
 LOCK TABLES `equipas` WRITE;
 /*!40000 ALTER TABLE `equipas` DISABLE KEYS */;
-INSERT INTO `equipas` VALUES (1,'62 TEAM',25,1,5,3,'Grupo A'),(2,'69 TEAM',4,1,6,2,'Grupo A'),(3,'69 TEAM',4,1,10,2,'Grupo B');
+INSERT INTO `equipas` VALUES (1,'62 TEAM',25,1,5,3,NULL),(2,'69 TEAM',4,1,6,2,NULL),(3,'69 TEAM',4,1,10,2,NULL);
 /*!40000 ALTER TABLE `equipas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `grupos`
+--
+
+DROP TABLE IF EXISTS `grupos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `grupos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `grupos`
+--
+
+LOCK TABLES `grupos` WRITE;
+/*!40000 ALTER TABLE `grupos` DISABLE KEYS */;
+INSERT INTO `grupos` VALUES (1,'Grupo A'),(2,'Grupo B'),(3,'Grupo C'),(4,'Grupo D');
+/*!40000 ALTER TABLE `grupos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -80,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-12 18:13:40
+-- Dump completed on 2017-03-15 23:37:08

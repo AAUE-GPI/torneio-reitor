@@ -4,10 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Calendario_model extends CI_Model {
 
 	public function __construct()
-    {
-            parent::__construct();
-            $this->load->database();
-    }
+	{
+		parent::__construct();
+		$this->load->database();
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -37,17 +37,23 @@ class Calendario_model extends CI_Model {
 
 	public function getJogosbyGroup($grupo)
 	{
-		$sql='SELECT * FROM calendario where grupo=?';
-		$query=$this->db->query($sql, array('$grupo'));
+		$query = $this->db->select('jornada, dia, hora, local, equipas, resultado')
+		->get_where('calendario', array('grupo' => $grupo));
+
 		return $query->result_array();
 	}
 
 	public function getEquipas(){
 		$query = $this->db->select('nome, pontos, jr, gm, gs')
-			->from('equipas')
-			->order_by('pontos', 'DESC')
-			->get();
-			
+		->from('equipas')
+		->order_by('pontos', 'DESC')
+		->get();
+
+		return $query->result_array();
+	}
+	public function getGrupos(){
+		$query = $this->db->get('grupos');
+
 		return $query->result_array();
 	}
 }
