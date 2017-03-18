@@ -2,14 +2,16 @@ body {
 	font-family: 'Lato', sans-serif;
 	background-image: url("../imgs/bg-grande.png");
 	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
 
 }
 
 .container {
-	padding-right: 10%;
-	padding-left: 10%;
-	margin-right: auto;
-	margin-left: auto;
+  padding-right: 10%;
+  padding-left: 10%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .botaoGrupos {
@@ -29,25 +31,25 @@ body {
 
 .botaoGrupos:focus,
 .botaoGrupos.focus {
-	color: white;
-	background-color: #4B99D5;
+  color: white;
+  background-color: #4B99D5;
 }
 .botaoGrupos:hover {
-	color: white;
-	background-color: #4B99D5;
+  color: white;
+  background-color: #4B99D5;
 }
 .botaoGrupos:active,
 .botaoGrupos.active,
 .open > .dropdown-toggle.botaoGrupos {
-	color: white;
-	background-color: #4B99D5;
+  color: white;
+  background-color: #4B99D5;
 }
 
 .tabela-riscada {
 	vertical-align: middle; 
-	text-align: center;
-	height: 60px;
-	border: 0px;
+    text-align: center;
+    height: 60px;
+    border: 0px;
 }
 
 .tabela-riscada > tbody > tr > td{
@@ -61,7 +63,7 @@ body {
 	background-color: #AD1C3E;
 	color:white;
 	vertical-align: middle; 
-	text-align: center;
+    text-align: center;
 }
 
 .tabela-riscada > tbody > tr:nth-of-type(odd) {
@@ -83,28 +85,56 @@ body {
 }
 
 .panel-faq {
-	border-color: #ddd;
-	border: none;
+  border-color: #ddd;
+  border: none;
 }
-.panel-faq >.panel-heading:nth-child(n+1) {
-	color: white;
-	background-color: black;
-	border-color: #ddd;
+.panel-faq .panel-heading-0 {
+  text-align: center;
+  color: white;
+  background-color: #AD1C3E;
+  border-color: #ddd;
 }
 
 
-.panel-faq >.panel-heading:nth-child(even) {
-	color: white;
-	background-color: red;
-	border-color: #ddd;
+.panel-faq .panel-heading-1 {
+  text-align: center;
+  color: white;
+  background-color: #8D1833;
+  border-color: #ddd;
 }
 
 .panel-faq > .panel-heading + .panel-collapse > .panel-body {
-	border-top-color: #ddd;
+  border:none;
+  border-radius: 0px;
 }
 .panel-faq > .panel-heading .badge {
-	color: #f5f5f5;
-	background-color: #333;
+  color: #f5f5f5;
+  background-color: #333;
 }
-.panel-faq > .panel-footer + .panel-collapse > .panel-body {
-	border-bottom-color: #ddd;
+.panel-faq .panel-body-0 {
+  border-bottom-color: #ddd;
+
+  border: none;
+  color: white;
+  background-color: #AD1C3E;
+}
+
+.panel-faq .panel-body-1 {
+  border-bottom-color: #ddd;
+  color: white;
+  background-color: #8D1833;
+}
+
+.panel-heading{
+	border-radius: 0px;
+}
+
+.seta-baixo-0{
+  padding:20%;
+  background-color: #8D1833;
+}
+
+.seta-baixo-1{
+  padding:20%;
+  background-color: #AD1C3E;
+}
