@@ -2,12 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Equipas extends CI_Controller {
-	
+
 	public function __construct()
-    {
-	   	parent::__construct();
-    	$this->load->model('Equipas_model');
-    }
+	{
+		parent::__construct();
+		$this->load->model('equipas_model');
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -26,11 +26,11 @@ class Equipas extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['nomeEquipas'] = $this->Equipas_model->getNomeEquipas();
-		$data['nomeJogadores'] = $this->Equipas_model->getNomeJogadores($data['nomeEquipas']);
-		print_r($data);
+		$data['nomeEquipas'] = $this->equipas_model->getNomeEquipas();
+
 		$this->load->view('template/header', $data);
 		$this->load->view('equipas');
 		$this->load->view('template/footer');
 	}
+
 }

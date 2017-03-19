@@ -1,18 +1,229 @@
-body {
+html, body {
 	font-family: 'Lato', sans-serif;
-	background-image: url("../imgs/bg-grande.png");
+	background-image: url("../imgs/bg-grande.jpg");
 	background-size:     cover;                      /* <------ */
-    background-repeat:   no-repeat;
-    background-position: center center; 
-
+	margin:0;
+	padding:0;
+	height:100%;
 }
 
 .container {
   padding-right: 10%;
   padding-left: 10%;
+	margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
 }
+
+.titulo{
+	text-align: center;
+	padding: 10px;
+	color: white;
+	font-weight: bolder;
+}
+
+p, li {
+	color: white;
+	font-weight: lighter;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+}
+
+  /**********************************************/
+ /*     Secção relativa ao header e footer     */
+/**********************************************/
+
+.flex {
+	display: flex;
+	height: 123px;
+}
+
+.col {
+	flex-direction: column;
+}
+
+.col, .col > div {
+	flex-grow: 1;
+}
+
+.social{
+	text-align: center;
+	height:100%;
+}
+
+.icones_social{
+	align-self: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 24px;
+	height: 24px;
+}
+
+#logo {
+	background: linear-gradient(to bottom, rgba(253,253,253,1) 0%, rgba(197,193,193,1) 100%);
+	width: calc(100%*0.5625);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: 220px;
+	text-align: center;
+}
+
+.logos_univ_aaue{
+	width:50%;
+	height: 100%;
+	text-align: center;
+}
+
+.logo_barra_cima{
+	vertical-align: middle;
+	align-self: center;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.botoes_header{
+	height: 100%;
+	text-align: center;
+	align-items: center;
+}
+
+#barra_cima{
+	background-color: rgb(173,28,62);
+	overflow: hidden;
+	height:50%;
+	text-align: center;
+	z-index: auto;
+}
+
+.botao_header{
+	width:100%;
+	height: 100%;
+	background-color: rgb(47,47,55);
+}
+
+.botao_header:hover {
+	background-color: rgb(75,153,213);
+}
+
+.botao_header:focus  {
+	background-color: rgb(75,153,213);
+}
+
+.header-dropdown{
+	background-color: rgb(47,47,55);
+	border: none;
+	outline: none;
+	width:100%;
+	height: 100%;
+}
+
+.header-dropdown:hover {
+	background-color: rgb(75,153,213);
+}
+
+.header-dropdown:focus  {
+	background-color: rgb(75,153,213);
+}
+
+#barra_baixo{
+	background-color: rgb(47,47,55);
+	height:50%;
+}
+
+#barra_baixo .botoes_header {
+	width: 100%;
+}
+
+#barra_baixo .botoes_header .botao_header {
+	text-decoration: none;
+	color: white;
+}
+
+#barra_baixo .botoes_header .botao_header{
+	text-decoration: none;
+	color: #ffffff;
+
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.footer-reitor{
+	display: flex;
+	height: 61.5px;
+	bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+	background-color: rgb(47,47,55);
+}
+
+.footer-text{
+	text-align: center;
+	align-self: center;
+	width: 100%;
+	color: #ffffff;
+	margin:0 auto;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+.header-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	display: none;
+	float: left;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	color: white;
+	background-color: rgb(47,47,55);
+	-webkit-background-clip: padding-box;
+					background-clip: padding-box;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0, 0, 0, .15);
+	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+					box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.header-menu > li > a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: white;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	white-space: nowrap;
+}
+
+.header-menu > li > a:hover,
+.header-menu > li > a:focus {
+	text-decoration: none;
+	background-color: rgb(75,153,213);
+}
+
+.open > .header-menu {
+	display: block;
+}
+
+.open > a {
+	outline: 0;
+}
+
+/******************************************************************/
+
+  /***************************************/
+ /*     Secção relativa às tabelas      */
+/***************************************/
 
 .botaoGrupos {
 	background-color: #AD1C3E;
@@ -46,7 +257,7 @@ body {
 }
 
 .tabela-riscada {
-	vertical-align: middle; 
+	vertical-align: middle;
     text-align: center;
     height: 60px;
     border: 0px;
@@ -62,7 +273,7 @@ body {
 	height: 60px;
 	background-color: #AD1C3E;
 	color:white;
-	vertical-align: middle; 
+	vertical-align: middle;
     text-align: center;
 }
 
@@ -84,20 +295,27 @@ body {
 	}
 }
 
+/******************************************************************/
+
+  /*********************************************/
+ /*     Secção relativa ao collapse panel     */
+/*********************************************/
+
 .panel-faq {
   border-color: #ddd;
   border: none;
 }
 .panel-faq .panel-heading-0 {
-  text-align: center;
+	text-align: left;
+	padding-left: 20px;
   color: white;
   background-color: #AD1C3E;
   border-color: #ddd;
 }
 
-
 .panel-faq .panel-heading-1 {
-  text-align: center;
+  text-align: left;
+	padding-left: 20px;
   color: white;
   background-color: #8D1833;
   border-color: #ddd;
@@ -107,10 +325,12 @@ body {
   border:none;
   border-radius: 0px;
 }
+
 .panel-faq > .panel-heading .badge {
   color: #f5f5f5;
   background-color: #333;
 }
+
 .panel-faq .panel-body-0 {
   border-bottom-color: #ddd;
 
@@ -138,3 +358,5 @@ body {
   padding:20%;
   background-color: #AD1C3E;
 }
+
+/******************************************************************/
