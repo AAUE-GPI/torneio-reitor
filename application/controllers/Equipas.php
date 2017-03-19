@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FAQ_model extends CI_Model {
-
+class Equipas extends CI_Controller {
+	
 	public function __construct()
     {
-        parent::__construct();
-        $this->load->database();
+	   	parent::__construct();
+    	$this->load->model('Equipas_model');
     }
 
 	/**
@@ -24,17 +24,13 @@ class FAQ_model extends CI_Model {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function getFAQ()
+	public function index()
 	{
-		$query = $this->db->get('FAQ');
-
-
-		return $query->result_array();
-	}
-	public function getPergunta()
-	{
-		$query = $this->db->query("SELECT questao FROM FAQ WHERE id = 1;");
-
-		return $query->result_array();
+		$data['nomeEquipas'] = $this->Equipas_model->getNomeEquipas();
+		$data['nomeJogadores'] = $this->Equipas_model->getNomeJogadores($data['nomeEquipas']);
+		print_r($data);
+		$this->load->view('template/header', $data);
+		$this->load->view('equipas');
+		$this->load->view('template/footer');
 	}
 }

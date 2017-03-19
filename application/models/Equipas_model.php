@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FAQ_model extends CI_Model {
+class Equipas_model extends CI_Model {
 
 	public function __construct()
     {
@@ -24,17 +24,14 @@ class FAQ_model extends CI_Model {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function getFAQ()
+	public function getNomeEquipas()
 	{
-		$query = $this->db->get('FAQ');
-
-
+		$query = $this->db->get('equipas');
 		return $query->result_array();
 	}
-	public function getPergunta()
-	{
-		$query = $this->db->query("SELECT questao FROM FAQ WHERE id = 1;");
 
-		return $query->result_array();
+	public function getNomeJogadores($EquipaId)
+	{
+		$query = $this->db->get_where('jogadores', array('EquipaId' => $EquipaId));
 	}
 }
