@@ -54,5 +54,6 @@ $route['cona'] = 'calendario/index';
 
 $route['calendario'] = 'calendario';
 $route['FAQ'] = 'FAQ';
+$route['equipas'] = 'equipas';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
