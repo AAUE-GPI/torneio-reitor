@@ -5,8 +5,8 @@ class Equipas_model extends CI_Model {
 
 	public function __construct()
     {
-            parent::__construct();
-            $this->load->database();
+        parent::__construct();
+        $this->load->database();
     }
 
 	/**
@@ -27,7 +27,6 @@ class Equipas_model extends CI_Model {
 	public function getNomeEquipas()
 	{
 		$query = $this->db->get('equipas');
-
 		return $query->result_array();
 	}
 
