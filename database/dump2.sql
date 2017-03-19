@@ -36,7 +36,7 @@ CREATE TABLE `FAQ` (
 
 LOCK TABLES `FAQ` WRITE;
 /*!40000 ALTER TABLE `FAQ` DISABLE KEYS */;
-INSERT INTO `FAQ` VALUES (1,'CONA?','ÇIM POR FAVOR QUERO, A MENOS QUE SEJAS O FUSCO'),(2,'pergunta?','Esta é uma resposta'),(3,'pergunta2?','Esta é uma outra resposta');
+INSERT INTO `FAQ` VALUES (1,'Onde posso encontrar os boletins para preencher?','Os boletins estarão disponíveis na AAUE bem como no pavilhão da UE durante o decorrer dos jogos.'),(2,'Como é que sei o número dos jogos para poder preencher o boletim?','Será disponibilizado um calendário no evento do Torneio do Reitor bem como no Site do torneio onde estão identificados os números dos jogos.'),(3,'O pagamento do boletim é feito no ato do levantamento do mesmo ou na entrega?','Na entrega.'),(4,'Quais os locais onde se podem entregar os boletins?','Apenas no pavilhão e em dias de jogos: poderá ser entregue a partir de 20 minutos antes do primeiro jogo do dia.'),(5,'Eu fico com algum comprovativo do boletim?','Sim. É tirada uma foto no ato da entrega e enviada para o teu e-mail.'),(6,'Eu fico com algum comprovativo do boletim?','Sim. É tirada uma foto no ato da entrega e enviada para o teu e-mail.'), (7,'Os resultados contam até ao prolongamento e penalties, caso haja?','Não. Para o Reitor Tips só conta o resultado em tempo regulamentar.'), (8,'Quando e onde é que posso levantar os meus prémios?','No fim do Torneio do Reitor será enviado e-mail para os vencedores. Poderão, depois disso, deslocar-se à AAUE para levantarem o seu prémio.');
 /*!40000 ALTER TABLE `FAQ` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,7 +51,6 @@ CREATE TABLE `calendario` (
   `jornada` int(11) DEFAULT NULL,
   `dia` int(11) DEFAULT NULL,
   `hora` text,
-  `local` text,
   `equipas` text,
   `resultado` text,
   `grupo` int(11) DEFAULT NULL
@@ -64,7 +63,7 @@ CREATE TABLE `calendario` (
 
 LOCK TABLES `calendario` WRITE;
 /*!40000 ALTER TABLE `calendario` DISABLE KEYS */;
-INSERT INTO `calendario` VALUES (1,2,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(4,2,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(3,4,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(1,3,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(5,6,'dfsd','fssfd','fdsdfsfd0','cona',NULL),(5,6,'dfsd','FUSCO GAY','NUNO GAY','cona',NULL),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',1),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',1),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',3),(1,2,'dfsd','fssfd','fdsdfsfd0','cona',2),(1,2,'dfsd','fssfd','Grupo A','cona',1),(1,2,'dfsd','fssfd','Grupo B','cona',2),(1,2,'dfsd','fssfd','Grupo C','cona',3),(1,2,'dfsd','fssfd','Grupo D','cona',4);
+INSERT INTO `calendario` VALUES (1,2,'dfsd','fdsdfsfd0','cona',NULL),(4,2,'dfsd','fdsdfsfd0','cona',NULL),(3,4,'dfsd','fdsdfsfd0','cona',NULL),(1,3,'dfsd','fdsdfsfd0','cona',NULL),(5,6,'dfsd','fdsdfsfd0','cona',NULL),(1,2,'fssfd','fdsdfsfd0','cona',1),(1,2,'fssfd','fdsdfsfd0','cona',1),(1,2,'fssfd','fdsdfsfd0','cona',3),(1,2,'fssfd','fdsdfsfd0','cona',2),(1,2,'fssfd','Grupo A','cona',1),(1,2,'fssfd','Grupo B','cona',2),(1,2,'fssfd','Grupo C','cona',3),(1,2,'fssfd','Grupo D','cona',4);
 /*!40000 ALTER TABLE `calendario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,7 +81,7 @@ CREATE TABLE `equipas` (
   `jr` int(11) DEFAULT NULL,
   `gm` int(11) DEFAULT NULL,
   `gs` int(11) DEFAULT NULL,
-  `grupo` int(11) DEFAULT NULL,
+  `grupo` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -93,7 +92,7 @@ CREATE TABLE `equipas` (
 
 LOCK TABLES `equipas` WRITE;
 /*!40000 ALTER TABLE `equipas` DISABLE KEYS */;
-INSERT INTO `equipas` VALUES (1,'62 TEAM',25,1,5,3,NULL),(2,'69 TEAM',4,1,6,2,NULL),(3,'69 TEAM',4,1,10,2,NULL);
+INSERT INTO `equipas` VALUES (1,'NETUE',0,1,0,0,"Grupo A"),(2,'Cuidado Qu\'é Desporto',0,1,0,0,"Grupo A"),(3,'Mecatrons',0,1,0,0,"Grupo A"),(4,'Psicologia',0,1,0,0,"Grupo A"),(5,'RI Paco Nassa',0,1,0,0,"Grupo A"),(6,'NEBIOQUE',0,1,0,0,"Grupo A"),(7,'Economia',0,1,0,0,"Grupo B"),(8,'Informática',0,1,0,0,"Grupo B"),(9,'F.C Baile de Munique',0,1,0,0,"Grupo B"),(10,'3ºDesporto',0,1,0,0,"Grupo B"),(11,'Dream Team',0,1,0,0,"Grupo B"),(12,'Geografia 2017',0,1,0,0,"Grupo B"),(13,'Geologia',0,1,0,0,"Grupo C"),(14,'Mão no Canhão',0,1,0,0,"Grupo C"),(15,'C.F Canelas 2017',0,1,0,0,"Grupo C"),(16,'Los Macarenas',0,1,0,0,"Grupo C"),(17,'RP',0,1,0,0,"Grupo C"),(18,'NEBUE',0,1,0,0,"Grupo C");
 /*!40000 ALTER TABLE `equipas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +116,7 @@ CREATE TABLE `grupos` (
 
 LOCK TABLES `grupos` WRITE;
 /*!40000 ALTER TABLE `grupos` DISABLE KEYS */;
-INSERT INTO `grupos` VALUES (1,'Grupo A'),(2,'Grupo B'),(3,'Grupo C'),(4,'Grupo D');
+INSERT INTO `grupos` VALUES (1,'Grupo A'),(2,'Grupo B'),(3,'Grupo C');
 /*!40000 ALTER TABLE `grupos` ENABLE KEYS */;
 UNLOCK TABLES;
 
