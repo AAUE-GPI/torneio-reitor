@@ -5,8 +5,8 @@ class FAQ_model extends CI_Model {
 
 	public function __construct()
     {
-            parent::__construct();
-            $this->load->database();
+        parent::__construct();
+        $this->load->database();
     }
 
 	/**

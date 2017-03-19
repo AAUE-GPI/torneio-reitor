@@ -5,7 +5,7 @@ class Equipas extends CI_Controller {
 	
 	public function __construct()
     {
-	    parent::__construct();
+	   	parent::__construct();
     	$this->load->model('Equipas_model');
     }
 
@@ -32,6 +32,5 @@ class Equipas extends CI_Controller {
 		$this->load->view('template/header', $data);
 		$this->load->view('equipas');
 		$this->load->view('template/footer');
-
 	}
 }
