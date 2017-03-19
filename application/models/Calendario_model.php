@@ -37,7 +37,7 @@ class Calendario_model extends CI_Model {
 
 	public function getJogosbyGroup($grupo)
 	{
-		$query = $this->db->select('jornada, dia, hora, local, equipas, resultado')
+		$query = $this->db->select('jornada, dia, hora, equipas, resultado')
 		->get_where('calendario', array('grupo' => $grupo));
 
 		return $query->result_array();
