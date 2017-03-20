@@ -145,7 +145,7 @@ CREATE TABLE `jogadores` (
 
 LOCK TABLES `jogadores` WRITE;
 /*!40000 ALTER TABLE `jogadores` DISABLE KEYS */;
-INSERT INTO `jogadores` VALUES ('cona da mana',1,1,3,'M',3,3,3),('cona da mana',1,1,3,'M',3,3,3);
+INSERT INTO `jogadores` VALUES ('pito',0,1,3,'M',3,3,3), ('rata',1,2,1,'M',3,3,3),('cona da mana',2,2,2,'M',3,3,3),('cona da tia',3,3,2,'M',3,3,3),('dedo',4,3,2,'M',3,3,3),('lingua',4,3,2,'M',3,3,3),('cu',5,3,2,'M',3,3,3),('e',6,3,2,'M',3,3,3),('buceta',4,3,2,'M',3,3,3),('dedo',4,3,2,'M',3,3,3),('lingua',4,3,2,'M',3,3,3),('cu',5,3,2,'M',3,3,3),('e',6,3,2,'M',3,3,3),('buceta',4,3,2,'M',3,3,3),('dedo',4,3,2,'M',3,3,3),('lingua',4,3,2,'M',3,3,3),('cu',5,3,2,'M',3,3,3),('e',6,3,2,'M',3,3,3),('buceta tambem',9,3,2,'M',3,3,3);
 /*!40000 ALTER TABLE `jogadores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

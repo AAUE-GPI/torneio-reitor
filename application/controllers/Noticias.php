@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Equipas extends CI_Controller {
+class Noticias extends CI_Controller {
 
 	public function __construct()
-	{
-		parent::__construct();
-		$this->load->model('equipas_model');
-	}
+    {
+	    parent::__construct();
+    	$this->load->model('Noticias_model');
+    }
 
 	/**
 	 * Index Page for this controller.
@@ -26,11 +26,12 @@ class Equipas extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['nomeEquipas'] = $this->equipas_model->getNomeEquipas();
-		$data['nomeJogador'] = $this->equipas_model->getNomeJogadores();
-
+		$data['row'] = $this->Noticias_model->getNoticias();
+		//$data['row'] = $this->FAQ_model->getPergunta();
+		//print_r($data);
 		$this->load->view('template/header', $data);
-		$this->load->view('equipas');
+		$this->load->view('Noticias');
 		$this->load->view('template/footer');
+
 	}
 }

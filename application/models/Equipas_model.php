@@ -31,11 +31,13 @@ class Equipas_model extends CI_Model {
 		return $query->result_array();
 	}
 
-	public function getNomeJogadores($EquipaId)
+	public function getNomeJogadores()
 	{
-		$query = $this->db->select('nomeJogador')
-		->get_where('jogadores', array('equipaId' => $EquipaId));
-
+		$this->db->select('*');
+		$this->db->from('equipas');
+		$this->db->join('jogadores', 'jogadores.equipaId = equipas.id');
+		$query = $this->db->get();
 		return $query->result_array();
+
 	}
 }
