@@ -5,7 +5,6 @@
     <div class="panel panel-faq">
       <?php
       $i=0;
-
       foreach($row as $row):?>
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?=$i?>" style="color: inherit;"">
           <div class="panel-heading panel-heading-<?php echo $i%2; ?>">
@@ -25,7 +24,10 @@
         </a>
 
       <div id="collapse<?=$i?>" class="panel-collapse collapse">
-        <div class="panel-body panel-body-<?php echo $i%2; ?>">R.: <?php print_r( $row['resposta'] ); ?></div>
+        <div class="panel-body panel-body-<?php echo $i%2; ?>">R.: 
+          <?php print_r( $row['resposta'] ); ?>
+          
+        </div>
       </div>
       <?php $i++; endforeach; ?>
 

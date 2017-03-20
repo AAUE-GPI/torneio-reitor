@@ -306,8 +306,8 @@ p, li {
   border: none;
 }
 .panel-faq .panel-heading-0 {
-	text-align: left;
-	padding-left: 20px;
+  text-align: left;
+  padding-left: 20px;
   color: white;
   background-color: #AD1C3E;
   border-color: #ddd;
@@ -315,7 +315,7 @@ p, li {
 
 .panel-faq .panel-heading-1 {
   text-align: left;
-	padding-left: 20px;
+  padding-left: 20px;
   color: white;
   background-color: #8D1833;
   border-color: #ddd;
@@ -360,3 +360,18 @@ p, li {
 }
 
 /******************************************************************/
+
+  /*********************************************/
+ /*     Secção relativa a tabela das equipas  */
+/*********************************************/
+
+.jogadores-tabela{
+	display:table;
+
+}
+
+.jogadores{
+	display: table-row; 
+	padding:5px;
+}
+
