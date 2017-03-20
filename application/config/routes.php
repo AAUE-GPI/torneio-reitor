@@ -54,6 +54,7 @@ $route['calendario'] = 'calendario';
 $route['faq'] = 'FAQ';
 $route['equipas'] = 'equipas';
 $route['premios'] = 'premios';
+$route['noticias'] = 'Noticias';
 $route['boletimjogo'] = 'BoletimJogo';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
