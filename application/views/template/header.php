@@ -101,7 +101,7 @@ $this->load->helper('url');
 
 	          <div class="botao_header dropdown" href="#">
 	            <a class="botao_header"
-	               href="#">
+	               href="<?php echo base_url()?>index.php/noticias/">
 	              <button class="header-dropdown"
 	                      type="button"
 	                      aria-haspopup="true" aria-expanded="true">
