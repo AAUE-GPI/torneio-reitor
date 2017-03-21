@@ -94,9 +94,9 @@ $this->load->helper('url');
 
 								<ul class="header-menu" aria-labelledby="torneio-masculino">
 									<li>
-										<a href="#" target="_blank">
-											Ficha de<wbr> Inscrição
-											</a>
+										<a href="#">
+											Ficha de<wbr> Inscrição <wbr>(Em breve)
+										</a>
 									</li>
 								</ul>
 							</div>
@@ -126,7 +126,7 @@ $this->load->helper('url');
 										</a>
 									</li>
 
-									<li><a href="#">Boletim de Jogo</a></li>
+									<li><a href="<?php echo base_url()?>index.php/boletim">Boletim de Jogo</a></li>
 
 									<li><a href="<?php echo base_url()?>index.php/faq/">FAQ</a></li>
 								</ul>
