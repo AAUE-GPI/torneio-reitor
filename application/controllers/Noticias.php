@@ -26,11 +26,13 @@ class Noticias extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['row'] = $this->Noticias_model->getNoticias();
+		$data['noticias'] = $this->Noticias_model->getNoticias();
+		$data['noticiasFreqs'] = $this->Noticias_model->getNoticias();
+
 		//$data['row'] = $this->FAQ_model->getPergunta();
 		//print_r($data);
 		$this->load->view('template/header', $data);
-		$this->load->view('Noticias');
+		$this->load->view('noticias');
 		$this->load->view('template/footer');
 
 	}

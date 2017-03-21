@@ -92,7 +92,7 @@ CREATE TABLE `equipas` (
 
 LOCK TABLES `equipas` WRITE;
 /*!40000 ALTER TABLE `equipas` DISABLE KEYS */;
-INSERT INTO `equipas` VALUES (1,'NETUE',0,1,0,0,'Grupo A'),(2,'Cuidado Qu\'é Desporto',0,1,0,0,'Grupo A'),(3,'Mecatrons',0,1,0,0,'Grupo A'),(4,'Psicologia',0,1,0,0,'Grupo A'),(5,'RI Paco Nassa',0,1,0,0,'Grupo A'),(6,'NEBIOQUE',0,1,0,0,'Grupo A'),(7,'Economia',0,1,0,0,'Grupo B'),(8,'Informática',0,1,0,0,'Grupo B'),(9,'F.C Baile de Munique',0,1,0,0,'Grupo B'),(10,'3ºDesporto',0,1,0,0,'Grupo B'),(11,'Dream Team',0,1,0,0,'Grupo B'),(12,'Geografia 2017',0,1,0,0,'Grupo B'),(13,'Geologia',0,1,0,0,'Grupo C'),(14,'Mão no Canhão',0,1,0,0,'Grupo C'),(15,'C.F Canelas 2017',0,1,0,0,'Grupo C'),(16,'Los Macarenas',0,1,0,0,'Grupo C'),(17,'RP',0,1,0,0,'Grupo C'),(18,'NEBUE',0,1,0,0,'Grupo C');
+INSERT INTO `equipas` VALUES (1,'NETUE - Turismo Doutromundo',0,1,0,0,'Grupo A'),(2,'Cuidado Qu\'é Desporto',0,1,0,0,'Grupo A'),(3,'Mecatrons',0,1,0,0,'Grupo A'),(4,'Psicologia',0,1,0,0,'Grupo A'),(5,'RI Paco Nassa',0,1,0,0,'Grupo A'),(6,'NEBIOQUE',0,1,0,0,'Grupo A'),(7,'Economia',0,1,0,0,'Grupo B'),(8,'Informática',0,1,0,0,'Grupo B'),(9,'F.C Baile de Munique',0,1,0,0,'Grupo B'),(10,'3ºDesporto',0,1,0,0,'Grupo B'),(11,'Dream Team',0,1,0,0,'Grupo B'),(12,'Geografia 2017',0,1,0,0,'Grupo B'),(13,'Geologia',0,1,0,0,'Grupo C'),(14,'Mão no Canhão',0,1,0,0,'Grupo C'),(15,'C.F Canelas 2017',0,1,0,0,'Grupo C'),(16,'Los Macarenas',0,1,0,0,'Grupo C'),(17,'RP',0,1,0,0,'Grupo C'),(18,'NEBUE',0,1,0,0,'Grupo C');
 /*!40000 ALTER TABLE `equipas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -169,7 +169,7 @@ CREATE TABLE `noticias` (
 
 LOCK TABLES `noticias` WRITE;
 /*!40000 ALTER TABLE `noticias` DISABLE KEYS */;
-INSERT INTO `noticias` VALUES ('2017-03-06','CONA DA MANA','EMBRIAGAY'),('2016-03-06','CONA DA tia','EMBRIAGAY'),('2017-04-06','CONA DA MANA','EMBRIAGAY');
+INSERT INTO `noticias` VALUES ('2017-03-17','Sorteio das equipas para o XV Torneio do Reitor Masculino','O sorteio das equipas para o Torneio do Reitor Masculino irá ter lugar amanhã, dia 18 de Março por volta das 15h, na sede da AAUÉ.<br><br> A AAUÉ convida os responsáveis de cada equipa a estarem presentes no sorteio, sendo que na indisponibilidade de comparecerem, poderão acompanhar a transmissão do sorteio em direto através da nossa página de Facebook.'),('2016-03-06','CONA DA tia','EMBRIAGAY '),('2017-04-06','CONA DA MANA','EEMBRIAGAYsaddddddddddddddddddddddddddddddddddsddddddddd sda     asdasdasassd dasd asdsd asdasd s sd asasddsafasffs.f asasf asffas fas asf afs afsasf asf fas asf asf asf asf fas asf . sadsasa asdsad asdsda assdd asasdasd asdasdd asdasddasdas     sad  sdasd'), ('2017-02-04','sddasd DA MANA','dsasfs');
 /*!40000 ALTER TABLE `noticias` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
