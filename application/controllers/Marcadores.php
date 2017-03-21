@@ -1,12 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Calendario extends CI_Controller {
+class Marcadores extends CI_Controller {
 	
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('calendario_model');
+		$this->load->model('marcadores_model');
 	}
 
 	/**
@@ -26,24 +26,10 @@ class Calendario extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['jogos'] = $this->calendario_model->getJogos();
-		$data['grupos'] = $this->calendario_model->getGrupos();
-		$data['tab_equipas'] = false;
+		$data['marcadores'] = $this->marcadores_model->getMarcadores();
 
 		$this->load->view('template/header', $data);
-		$this->load->view('calendario');
-		$this->load->view('template/footer');
-	}
-
-	public function grupos($grupo)
-	{
-		$data['jogos'] = $this->calendario_model->getJogosbyGroup($grupo);
-		$data['equipas'] = $this->calendario_model->getEquipas($grupo);
-		$data['grupos'] = $this->calendario_model->getGrupos();
-		$data['tab_equipas'] = true;
-
-		$this->load->view('template/header', $data);
-		$this->load->view('calendario');
+		$this->load->view('marcadores');
 		$this->load->view('template/footer');
 	}
 }
