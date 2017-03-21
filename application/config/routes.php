@@ -51,10 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'calendario/index';
 $route['calendario'] = 'calendario';
+$route['homepage'] = 'homepage';
 $route['faq'] = 'FAQ';
 $route['equipas'] = 'equipas';
 $route['premios'] = 'premios';
-$route['noticias'] = 'Noticias';
+$route['noticias'] = 'noticias';
 $route['boletimjogo'] = 'BoletimJogo';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

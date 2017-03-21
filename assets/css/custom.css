@@ -13,6 +13,7 @@ html, body {
 	margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
+	min-height: 100%;
 }
 
 .titulo{
@@ -154,7 +155,6 @@ p, li {
 	height: 61.5px;
 	bottom: 0;
   left: 0;
-  text-align: center;
   width: 100%;
 	background-color: rgb(47,47,55);
 }
@@ -371,7 +371,77 @@ p, li {
 }
 
 .jogadores{
-	display: table-row; 
+	display: table-row;
 	padding:5px;
 }
 
+
+  /**************************************/
+ /*     Secção relativa à homepage     */
+/**************************************/
+
+section.success {
+  color: white;
+}
+@media (max-width: 767px) {
+  section {
+    padding: 75px 0;
+  }
+  section.first {
+    padding-top: 75px;
+  }
+}
+
+.contactos {
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+	margin:0 auto;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+.contactos h3 {
+  margin-bottom: 30px;
+}
+.contactos .footer-above {
+  padding-top: 50px;
+	background-color: rgb(47,47,55);
+}
+.contactos .footer-col {
+  margin-bottom: 50px;
+}
+
+.botao-ler-mais{
+	background: none;
+	border: 2px solid white;
+	position: relative;
+	color: white;
+	border-radius: 0;
+	padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+
+.botao-ler-mais:hover{
+	color:white;
+	background: none;
+	border: 2px solid white;
+	text-decoration: none;
+}
+
+.botao-ler-mais:focus{
+	color:white;
+	background: none;
+	border: 2px solid white;
+}
+
+.imagem-slider{
+	-webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(50%);
+}
+
+#slider{
+	margin: 0 auto;
+  width: 100%;
+}

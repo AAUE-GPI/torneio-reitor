@@ -31,4 +31,15 @@ class Noticias_model extends CI_Model {
 
 		return $query->result_array();
 	}
+
+	public function getNoticiasFreqs()
+	{
+		$query = $this->db->select('*')
+		->from('noticias')
+		->order_by('data', 'DESC')
+		->limit(3)
+		->get();
+
+		return $query->result_array();
+	}
 }
