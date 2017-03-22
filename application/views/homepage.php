@@ -21,7 +21,7 @@
           <div class="container">
             <div class="carousel-caption" style="text-align: left;">
               <h1><?php print_r( $noticia['titulo'] ); ?></h1>
-              <p><?php print_r( substr($noticia['corpo'], 0, 116) ); ?></p>
+              <p><?php print_r( substr($noticia['corpo'], 0, 116) ); print_r("..."); ?></p>
               <p><a class="btn btn-lg botao-ler-mais" href="<?php echo base_url()?>index.php/noticias" role="button">Ler Mais</a></p>
             </div>
           </div>
@@ -97,7 +97,7 @@
             </li>
           </ul>
         </div>
-        
+
         <div class="footer-col col-md-4">
           <h3>Emails</h3>
           <p>desportiva@aaue.pt

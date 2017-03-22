@@ -26,7 +26,7 @@ class FAQ_model extends CI_Model {
 	 */
 	public function getFAQ()
 	{
-		$query = $this->db->get('FAQ');
+		$query = $this->db->get('tr2017_FAQ');
 
 
 		return $query->result_array();
@@ -34,7 +34,7 @@ class FAQ_model extends CI_Model {
 
 	public function getPergunta()
 	{
-		$query = $this->db->query("SELECT questao FROM FAQ WHERE id = 1;");
+		$query = $this->db->query("SELECT questao FROM tr2017_FAQ WHERE id = 1;");
 
 		return $query->result_array();
 	}

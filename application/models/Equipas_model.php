@@ -26,7 +26,7 @@ class Equipas_model extends CI_Model {
 	*/
 	public function getNomeEquipas()
 	{
-		$query = $this->db->get('equipas');
+		$query = $this->db->get('tr2017_equipas');
 
 		return $query->result_array();
 	}
@@ -34,8 +34,8 @@ class Equipas_model extends CI_Model {
 	public function getNomeJogadores()
 	{
 		$this->db->select('*');
-		$this->db->from('equipas');
-		$this->db->join('jogadores', 'jogadores.equipaId = equipas.id');
+		$this->db->from('tr2017_equipas');
+		$this->db->join('tr2017_jogadores', 'tr2017_jogadores.equipaId = tr2017_equipas.id');
 		$query = $this->db->get();
 		return $query->result_array();
 

@@ -2,10 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Calendario extends CI_Controller {
-	
+
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('url_helper');
 		$this->load->model('calendario_model');
 	}
 
@@ -37,13 +38,18 @@ class Calendario extends CI_Controller {
 
 	public function grupos($grupo)
 	{
-		$data['jogos'] = $this->calendario_model->getJogosbyGroup($grupo);
-		$data['equipas'] = $this->calendario_model->getEquipas($grupo);
-		$data['grupos'] = $this->calendario_model->getGrupos();
-		$data['tab_equipas'] = true;
+		if(is_numeric($grupo) and ($grupo >= 1 or $grupo <= 3)){
+			$data['jogos'] = $this->calendario_model->getJogosbyGroup($grupo);
+			$data['equipas'] = $this->calendario_model->getEquipas($grupo);
+			$data['grupos'] = $this->calendario_model->getGrupos();
+			$data['tab_equipas'] = true;
 
-		$this->load->view('template/header', $data);
-		$this->load->view('calendario');
-		$this->load->view('template/footer');
+			$this->load->view('template/header', $data);
+			$this->load->view('calendario');
+			$this->load->view('template/footer');
+		}
+		else{
+			redirect(base_url());
+		}
 	}
 }

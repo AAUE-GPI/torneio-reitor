@@ -29,8 +29,8 @@ class Marcadores_model extends CI_Model {
 	// select nome from jogadores inner join equipas on jogadores.equipaId = equipas.id ;
 	{
 		$query = $this->db->select('nome, nomeJogador, golos')
-		->from('jogadores')
-		->join('equipas', 'jogadores.equipaId = equipas.id')
+		->from('tr2017_jogadores')
+		->join('tr2017_equipas', 'tr2017_jogadores.equipaId = tr2017_equipas.id')
 		->order_by('golos', 'DESC')
 		->limit(10)
 		->get();

@@ -27,7 +27,7 @@ class Disciplina_model extends CI_Model {
 	public function getDisciplina()
 	{
 		$query = $this->db->select('nome, cart_amrl, cart_verm, castigos, pts_fairplay')
-		->from('equipas')
+		->from('tr2017_equipas')
 		->order_by('pts_fairplay', 'DESC')
 		->get();
 

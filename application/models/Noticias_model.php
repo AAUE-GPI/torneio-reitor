@@ -26,7 +26,7 @@ class Noticias_model extends CI_Model {
 	 */
 	public function getNoticias()
 	{
-		$query = $this->db->query('SELECT * FROM noticias ORDER BY data DESC');
+		$query = $this->db->query('SELECT * FROM tr2017_noticias ORDER BY data DESC');
 
 
 		return $query->result_array();
@@ -35,7 +35,7 @@ class Noticias_model extends CI_Model {
 	public function getNoticiasFreqs()
 	{
 		$query = $this->db->select('*')
-		->from('noticias')
+		->from('tr2017_noticias')
 		->order_by('data', 'DESC')
 		->limit(3)
 		->get();
