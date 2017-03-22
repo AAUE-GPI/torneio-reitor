@@ -26,7 +26,7 @@ class Calendario_model extends CI_Model {
 	 */
 	public function getJogos()
 	{
-		$query = $this->db->get('calendario');
+		$query = $this->db->get('tr2017_calendario');
 
 		return $query->result_array();
 	}
@@ -41,7 +41,7 @@ class Calendario_model extends CI_Model {
 		->order_by('jornada','ASC')
 		->order_by('dia','ASC')
 		->order_by('hora','ASC')
-		->get_where('calendario', array('grupo' => $grupo));
+		->get_where('tr2017_calendario', array('grupo' => $grupo));
 
 		return $query->result_array();
 	}
@@ -52,13 +52,13 @@ class Calendario_model extends CI_Model {
 		->order_by('jogos', 'ASC')
 		->order_by('dif', 'DESC')
 		->order_by('gm', 'DESC')
-		->get_where('equipas', array('grupo' => $grupo));
+		->get_where('tr2017_equipas', array('grupo' => $grupo));
 
 		return $query->result_array();
 	}
-	
+
 	public function getGrupos(){
-		$query = $this->db->get('grupos');
+		$query = $this->db->get('tr2017_grupos');
 
 		return $query->result_array();
 	}
