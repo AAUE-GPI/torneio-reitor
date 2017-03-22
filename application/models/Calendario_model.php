@@ -38,19 +38,25 @@ class Calendario_model extends CI_Model {
 	public function getJogosbyGroup($grupo)
 	{
 		$query = $this->db->select('jornada, dia, hora, equipas, resultado')
+		->order_by('jornada','ASC')
+		->order_by('dia','ASC')
+		->order_by('hora','ASC')
 		->get_where('calendario', array('grupo' => $grupo));
 
 		return $query->result_array();
 	}
 
-	public function getEquipas(){
-		$query = $this->db->select('nome, pontos, jr, gm, gs')
-		->from('equipas')
+	public function getEquipas($grupo){
+		$query = $this->db->select('nome, jogos, pontos, gm, gs, (gm - gs) as dif')
 		->order_by('pontos', 'DESC')
-		->get();
+		->order_by('jogos', 'ASC')
+		->order_by('dif', 'DESC')
+		->order_by('gm', 'DESC')
+		->get_where('equipas', array('grupo' => $grupo));
 
 		return $query->result_array();
 	}
+	
 	public function getGrupos(){
 		$query = $this->db->get('grupos');
 

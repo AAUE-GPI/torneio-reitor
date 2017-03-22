@@ -70,10 +70,10 @@ $this->load->helper('url');
 										<a href="<?php echo base_url()?>index.php/calendario/">Calendário</a>
 									</li>
 									<li>
-										<a href="#">Melhores<wbr> Marcadores</a>
+										<a href="<?php echo base_url()?>index.php/marcadores/">Melhores<wbr> Marcadores</a>
 									</li>
 									<li>
-										<a href="#">Disciplina</a>
+										<a href="<?php echo base_url()?>index.php/disciplina/">Disciplina</a>
 									</li>
 									<li>
 										<a href="<?php echo base_url()?>index.php/equipas/">Equipas</a>

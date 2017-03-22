@@ -1,5 +1,5 @@
-<div class="container">
-  <h1 class="titulo">Prémios</h1>
+<h1 class="titulo">Prémios</h1>
+<div class="container premios">
 
     <p class="premios-text">
       Serão atribuídos os seguintes prémios:

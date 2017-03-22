@@ -47,38 +47,39 @@
 			</table>
 		</table>
 	</div>
-
-	<div class="table-responsive">
-		<table class="table">
-			<table class="table tabela-riscada">
-				<thead>
-					<tr>
-						<th>Posição</th>
-						<th>Equipa</th>
-						<th>JR</th>
-						<th>GM</th>
-						<th>GS</th>
-						<th>DIF</th>
-						<th>PTS</th>
-					</tr>
-				</thead>
-
-				<tbody>
-					<?php
-					$posicao = 1;
-					foreach($equipas as $equipas): ?>
+	<?php if ($tab_equipas == true){ ?>
+		<div class="table-responsive">
+			<table class="table">
+				<table class="table tabela-riscada">
+					<thead>
 						<tr>
-							<td><?php echo($posicao); $posicao ++;?></td>
-							<td><?php echo $equipas['nome']; ?></td>
-							<td><?php echo $equipas['jr']; ?></td>
-							<td><?php echo $equipas['gm']; ?></td>
-							<td><?php echo $equipas['gs']; ?></td>
-							<td><?php echo ($equipas['gm'] - $equipas['gs']); ?></td>
-							<td><?php echo $equipas['pontos']; ?></td>
+							<th>Posição</th>
+							<th>Equipa</th>
+							<th>Jogos</th>
+							<th>GM</th>
+							<th>GS</th>
+							<th>DIF</th>
+							<th>PTS</th>
 						</tr>
-					<?php endforeach; ?>
-				</tbody>
+					</thead>
+
+					<tbody>
+						<?php
+						$posicao = 1;
+						foreach($equipas as $equipas): ?>
+							<tr>
+								<td><?php echo($posicao); $posicao ++;?></td>
+								<td><?php echo $equipas['nome']; ?></td>
+								<td><?php echo $equipas['jogos']; ?></td>
+								<td><?php echo $equipas['gm']; ?></td>
+								<td><?php echo $equipas['gs']; ?></td>
+								<td><?php echo $equipas['dif']; ?></td>
+								<td><?php echo $equipas['pontos']; ?></td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
 			</table>
-		</table>
-	</div>
+		</div>
+	<?php } ?>
 </div>

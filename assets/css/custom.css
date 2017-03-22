@@ -8,10 +8,10 @@ html, body {
 }
 
 .container {
-	padding-right: 10%;
-	padding-left: 10%;
+ 	padding-right: 5%;
+	padding-left: 5%;
 	margin-top: 20px;
-	margin-right: auto;
+ 	margin-right: auto;
 	margin-left: auto;
 	min-height: 100%;
 }
@@ -444,4 +444,18 @@ section.success {
 #slider{
 	margin: 0 auto;
 	width: 100%;
+}
+
+/*************************************************/
+/*     Secção relativa à pagina dos prémios     */
+/***********************************************/
+
+.premios {
+	background-color: #8D1833;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border: 2px solid rgb(47,47,55);
+	margin-bottom: 20px;
+	width: 70%;
+	min-height: 0%;
 }
